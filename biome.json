@@ -21,7 +21,8 @@
     "enabled": true,
     "rules": {
       "recommended": true
-    }
+    },
+    "ignore": ["src/routeTree.gen.ts"]
   },
   "javascript": {
     "formatter": {
