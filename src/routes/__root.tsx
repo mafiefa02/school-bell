@@ -1,6 +1,6 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import * as React from "react";
+import { RootLayout } from "src/components/root-layout";
+import { ThemeProvider } from "src/components/theme-provider";
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -8,9 +8,10 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <React.Fragment>
-      <Outlet />
-      <TanStackRouterDevtools />
-    </React.Fragment>
+    <ThemeProvider defaultTheme="dark">
+      <RootLayout>
+        <Outlet />
+      </RootLayout>
+    </ThemeProvider>
   );
 }
