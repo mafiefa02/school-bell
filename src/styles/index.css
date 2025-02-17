@@ -4,6 +4,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: Plus Jakarta Sans;
+  src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+}
+
 :root {
   --background: hsl(0 0% 97.65%);
   --foreground: hsl(0 0% 12.55%);
@@ -88,11 +93,12 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --font-jakarta-sans: Plus Jakarta Sans, "sans-serif";
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 font-jakarta-sans;
   }
   body {
     @apply bg-background text-foreground;
